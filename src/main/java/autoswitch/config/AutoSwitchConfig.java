@@ -110,12 +110,12 @@ public interface AutoSwitchConfig extends Config, Reloadable, Accessible, Mutabl
     @Comment("Will force use of the toggle key in order to enable switching.")
     Boolean disableSwitchingOnStartup();
 
-    @DefaultValue("0.05") // 1 tick's time
+    @DefaultValue("10") // 1 tick's time
     @Comment("Delay in seconds from end of hand swinging to perform switchback action. Resolution on the order of " +
              "ticks. " + "0.05 is 1 tick of delay.")
     Float switchbackDelay();
 
-    @DefaultValue("0.05")
+    @DefaultValue("10")
     @Comment("Delay in seconds from triggering of normal switch action on the basis that the previous switch " +
              "has not been undone via switchback. Resolution on the order of ticks. " + "0.05 is 1 tick of delay.")
     Float switchDelay();
